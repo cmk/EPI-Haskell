@@ -74,7 +74,7 @@ sudokuSolve problem = let
       board <- sudokuIter tail
       k <- [1..9]
       guard $ isLegal board (index,k)
-      return  $ (index,k) : board 
+      return $ (index,k) : board 
   in sudokuIter indices
 
 main :: IO ()
