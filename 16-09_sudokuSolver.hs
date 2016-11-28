@@ -77,3 +77,9 @@ sudokuSolve problem = let
       return  $ (index,k) : board 
   in sudokuIter indices
 
+main :: IO ()
+main = do
+  showBoard board
+  putStr "\n"
+  showBoard $ head $ sudokuSolve board
+  putStr "\n"
