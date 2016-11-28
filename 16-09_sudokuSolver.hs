@@ -1,6 +1,5 @@
 --16-9 Create a Sudoku solver
 
---import Data.Set (Set)
 import Data.List (sort)
 import Control.Monad (guard)
 type Element = (Int, Int)
@@ -13,7 +12,6 @@ format elts =
         where filler = [(0,0) | i <- [1.. (fst new) - (fst $ head formatted)-1]]  
   in foldl foo [head elts'] (tail elts')
 
---chunks n = takeWhile (not.null) . unfoldr (Just . splitAt n)
 chunks :: Int -> [a] -> [[a]]
 chunks _ [] = []
 chunks n xs =
