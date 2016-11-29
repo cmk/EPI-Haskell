@@ -1,5 +1,6 @@
 --16-9 Create a Sudoku solver
 
+
 import Data.List (sort)
 import Control.Monad (guard)
 type Element = (Int, Int)
