@@ -12,7 +12,7 @@ type Choices = [Digit]
 digits = ['1'..'9']
 blank = (=='0')
 
-solve = filter valid . expand . choices
+solve = filter valid . expand . prune . prune . prune . prune . prune . choices
 
 choices :: Grid -> Matrix Choices
 choices = map (map choice)
@@ -63,7 +63,9 @@ pruneRow row = map (remove fixed) row
   where fixed = [d | [d] <- row]
         remove xs ds = if singleton ds then ds else ds \\ xs
         singleton ds = length ds == 1
-        
+
+showGrid g = concat $ map (++ "\n") g
+
 board :: Grid
 board = [['5','3','0','0','7','0','0','0','0'],
          ['6','0','0','1','9','5','0','0','0'],
@@ -77,4 +79,6 @@ board = [['5','3','0','0','7','0','0','0','0'],
   
 main :: IO ()
 main = do
-  putStr . show $ cp [[1,2],[3],[4,5]]
+  putStr  (showGrid board)
+  putStr "\n"
+  putStr  (showGrid $ head $ solve board)
