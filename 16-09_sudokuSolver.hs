@@ -26,6 +26,7 @@ toString board =
 showBoard :: Board -> IO ()
 showBoard board = putStr $ toString board
 
+
 board :: Board
 board = [(0,5),(1,3),(4,7),(9,6),(12,1),(13,9),(14,5),
     (19,9),(20,8),(25,6),(27,8),(31,6),(35,3),(36,4),
