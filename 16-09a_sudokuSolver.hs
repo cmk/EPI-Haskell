@@ -22,7 +22,7 @@ choice d = if blank d then digits else [d]
 expand :: Matrix Choices -> [Grid]
 expand = cp . map cp
 
-cp :: [[a]] -> [[a]]
+cp :: [[a]] -> [[a]] 
 cp [] = [[]]
 cp (xs : xss) = do
   x <- xs
