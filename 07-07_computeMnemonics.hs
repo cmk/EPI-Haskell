@@ -1,3 +1,4 @@
+--07-07 compute all mnemonics for a phone numer
 import qualified Data.HashMap.Strict as H
 
 keypad :: H.HashMap Char String
