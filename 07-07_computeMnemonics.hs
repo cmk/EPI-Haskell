@@ -1,4 +1,4 @@
---07-07 compute all mnemonics for a phone numer
+--07-07 compute all mnemonics for a phone number
 import qualified Data.HashMap.Strict as H
 
 keypad :: H.HashMap Char String
